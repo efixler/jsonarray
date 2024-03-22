@@ -1,4 +1,4 @@
-package json
+package jsonarray
 
 import (
 	"bytes"
