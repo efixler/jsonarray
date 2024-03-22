@@ -1,5 +1,5 @@
 /*
-Package json provides an interface to stream an array of JSON objects to an
+Package jsonarray provides an interface to stream an array of JSON objects to an
 io.Writer. This is useful for streaming long JSON arrays to an HTTP response.
 */
 package jsonarray
@@ -29,7 +29,7 @@ type Encoder[T any] struct {
 	comma    []byte
 }
 
-func NewArrayEncoder[T any](w io.Writer, hotPipe bool) *Encoder[T] {
+func NewEncoder[T any](w io.Writer, hotPipe bool) *Encoder[T] {
 	ae := &Encoder[T]{
 		w:       w,
 		flusher: func() {},
